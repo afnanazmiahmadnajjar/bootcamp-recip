@@ -11,9 +11,31 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="style.css" />
+
     <title>MIDExameproject</title>
   </head>
   <body>
+    <script id="ingredients-template" type="text/x-handlebars-template">
+      {{#each data}}
+        <div class="grid-item">
+          <a href="{{href}}">{{title}} </a><br />
+          <br />
+          <img src={{thumbnail}} alt="Recipe-picture" class="imgR" />
+          <br />
+          <h4>ingredients</h4>
+          <ul>
+            {{#each ingredients}}
+              <li>{{this}}</li>
+            {{/each}}
+          </ul>
+
+        </div>
+      {{/each}}
+    </script>
+    <input type="text" id="input" placeholder="ingredients" />
+    <button onclick="getRecipesingredients()">Search</button><br />
+    <div class="grid-container"></div>
+
     <script src="./jquery/dist/jquery.js"></script>
     <script src="./handlebars/dist/handlebars.js"></script>
     <script src="render.js"></script>

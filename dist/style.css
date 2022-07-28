@@ -1,0 +1,25 @@
+body {
+  background-color: #ecf0f1;
+  font-family: "Balthazar", serif;
+  margin: 10px;
+}
+.grid-container {
+  display: grid;
+  grid-gap: 20px;
+  padding-left: 25px;
+  padding-right: 25px;
+  grid-template-columns: 3fr 1fr;
+  grid-template-areas: "h ." "i b" "p p";
+}
+button {
+  grid-area: b;
+  padding: 3px;
+  background-color: yellow;
+  border: 1px solid yellowgreen;
+  box-shadow: 1px 1px 5px #2c5037;
+  cursor: pointer;
+  justify-content: center;
+}
+#input {
+  grid-area: i;
+}
